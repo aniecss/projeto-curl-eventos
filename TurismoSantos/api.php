@@ -107,11 +107,6 @@ file_put_contents($arquivo,json_encode($listaEventos, JSON_PRETTY_PRINT | JSON_U
 
 echo "\nArquivo salvo\n";
 
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\Curls.php
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\TurismoSantos\api.php
-
-
 $eventos = json_decode(file_get_contents('eventos_turismo_santos.json'), true);
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
