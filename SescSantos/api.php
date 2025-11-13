@@ -15,7 +15,7 @@
  // definir a URL de destino
  curl_setopt($cRuL, CURLOPT_URL, $endpoint);
 
- // retornar o resultado da requisição como string em vez de imprimir diretamente
+ // retornar o resultado da requisição 
  curl_setopt($cRuL, CURLOPT_RETURNTRANSFER, true);
 
  // executar a requisição
@@ -29,7 +29,7 @@ if (curl_errno($cRuL)) {
 } else{
     print($response);
 }
-// fechar a execução cURL
+
 curl_close($cRuL);
 
 /* -------------------------------------
@@ -41,13 +41,12 @@ $listaEventos = [];
 if ($response) {
     $html = new DOMDocument();
     
-    // informar HTML malformado 
     @$html->loadHTML($response);
 
     $xpath = new DOMXPath($html);
 
     // selecionar os containers que posseuem os eventos
-    $xpath_container = ("//div[contains(@class, 'carrossel-home-item')]");  // //div[contains(@class, 'carrossel-home-item-thumbnail')]
+    $xpath_container = ("//div[contains(@class, 'carrossel-home-item')]"); 
     $eventos = $xpath->query($xpath_container);
 
     if ($eventos->length > 0) {
@@ -77,7 +76,7 @@ if ($response) {
             ];
         }
         echo "Lista de eventos preenchida com sucesso!\n";
-        // print_r($listaEventos);
+
     }else {
         echo "Não foi possível encontrar cards de evento com o XPath '$xpath_container'.\n";
     }
@@ -92,5 +91,4 @@ file_put_contents($arquivo,json_encode($listaEventos, JSON_PRETTY_PRINT | JSON_U
 
 echo "\nArquivo JSON salvo $arquivo\n";
 
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\SescSantos\api.php
 ?>
