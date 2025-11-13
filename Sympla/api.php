@@ -4,17 +4,16 @@ use Dom\XPath;
 
 $endpoint = 'https://www.sympla.com.br/eventos?s=santos';
 
-$cRUL = curl_init(); // Variável inicializada
+$cRUL = curl_init(); 
 
 curl_setopt($cRUL, CURLOPT_URL, $endpoint);
 
 curl_setopt($cRUL, CURLOPT_RETURNTRANSFER, true);
 
-// CORREÇÃO: Usar $cRUL (a variável correta) em vez de $scRUL
 $response = curl_exec($cRUL); 
 
 if (curl_errno($cRUL)) {
-    echo "Erro cRUL: " . curl_error($cRUL); // Melhorando a mensagem de erro
+    echo "Erro cRUL: " . curl_error($cRUL); 
 } else {
     print_r($response);
 }
@@ -31,7 +30,7 @@ if ($response) {
 
     $xpath = new DOMXPath($html);
     
-    // Seleciona os containers que possuem eventos
+    // Seleciona os containers 
     $xpath_container = "//div[contains(@class, 'k5k13s8"; 
     $eventos = $xpath->query($xpath_container);
 
@@ -63,8 +62,6 @@ if ($response) {
         echo "Não foi possível encontrar cards de evento com o XPath '$xpath_container'.\n";
     }
 }
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\Sympla/api.php
-
-//  Não consegui porque o HTML não me retoronou com estrutura boa
-?>
+    
+//  NÃO CONSEGUI FINALIZAR O PROJETO PORQUE O HTML NÃO ME RETORNOU COM UMA ESTRUTRA QUE EU PUDESSE VISUALIZAR MELHOR
+?
