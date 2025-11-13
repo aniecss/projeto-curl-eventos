@@ -69,5 +69,4 @@ file_put_contents($arquivo, json_encode($listaEventos, JSON_UNESCAPED_UNICODE | 
 
 echo "Arquivo Json em: " . $arquivo . "\n";
 
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\AgendaSantos\api.php
 ?>
