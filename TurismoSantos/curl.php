@@ -30,8 +30,4 @@ if (curl_errno($cURL)) {
 // Fechar a conexão cURL
 curl_close($cURL);
 
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\TurismoSantos/api.php
-
-
 ?>

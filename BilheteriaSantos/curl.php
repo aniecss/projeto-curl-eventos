@@ -15,7 +15,7 @@
  // definir a URL de destino
  curl_setopt($cRuL, CURLOPT_URL, $endpoint);
 
- // retornar o resultado da requisição como string em vez de imprimir diretamente
+ // retornar o resultado da requisição
  curl_setopt($cRuL, CURLOPT_RETURNTRANSFER, true);
 
  // executar a requisição
@@ -31,7 +31,3 @@ if (curl_errno($cRuL)) {
 }
 // fechar a execução cURL
 curl_close($cRuL);
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\BilheteriaSantos/curl.php
-
-// class="institucional-skeleton"

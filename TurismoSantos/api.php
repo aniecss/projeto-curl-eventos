@@ -132,8 +132,3 @@ if ($response) {
 
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($listaEventos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\Curls.php
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\TurismoSantos\api.php

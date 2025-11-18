@@ -17,5 +17,4 @@ if (curl_errno($cURL)) {
 curl_close($cURL);
 
 
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\AgendaSaoPaulo\api.php
 ?>

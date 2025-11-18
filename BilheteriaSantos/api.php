@@ -9,10 +9,9 @@ $endpoint = 'https://www.bilheteriaexpress.com.br/agendas/santos.html#page=1';
 // fazer a requisição cURL
 $cURL = curl_init();
 
-// definir a URL de destino
 curl_setopt($cURL, CURLOPT_URL, $endpoint);
 
-// retornar o resultado da requisição como string em vez de imprimir diretamente
+// retornar o resultado da requisição
 curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
 
 // executar a requisição
@@ -88,7 +87,5 @@ file_put_contents($arquivo,json_encode($listaEventos, JSON_PRETTY_PRINT | JSON_U
 
 echo "Arquivo JSON salvo em: $arquivo\n";
 
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\BilheteriaSantos/api.php
 
 ?>

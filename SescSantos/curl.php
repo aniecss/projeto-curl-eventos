@@ -12,7 +12,7 @@
  // fazer a requisição cURL
  $cRuL = curl_init();
  
- // definir a URL de destino
+ // definir a URL
  curl_setopt($cRuL, CURLOPT_URL, $endpoint);
 
  // retornar o resultado da requisição como string em vez de imprimir diretamente
@@ -31,6 +31,3 @@ if (curl_errno($cRuL)) {
 }
 // fechar a execução cURL
 curl_close($cRuL);
-
-
-// & "C:\xampp\php\php.exe" C:\xampp\htdocs\Projeto_Curl\SescSantos\curl.php
